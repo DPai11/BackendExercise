@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import com.example.backendexercise.model.Book;
 
-public class localDB {
+public class LocalDB {
 	private ArrayList<Book> library;
 	private int idIter;
-	public localDB() {
+	public LocalDB() {
 		library = new ArrayList<Book>();
 		idIter =0;
 	}

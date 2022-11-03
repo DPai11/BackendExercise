@@ -7,16 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.backendexercise.database.localDB;
+import com.example.backendexercise.database.LocalDB;
 import com.example.backendexercise.model.Book;
 
 @Service
 public class BackendExerciseService {
-	localDB library;
-	
-	public BackendExerciseService() {
-		library = new localDB();
-	}
+	LocalDB library = new LocalDB();
 	
 	public Book addBook(Book book) {
 		library.addBook(book);

@@ -5,7 +5,6 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Book{
-	@Id
 	private int id;
 	
 	@JsonProperty("author")
