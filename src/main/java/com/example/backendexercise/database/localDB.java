@@ -1,5 +1,30 @@
 package com.example.backendexercise.database;
 
-public class localDB {
+import java.util.ArrayList;
 
+import com.example.backendexercise.model.Book;
+
+public class localDB {
+	private ArrayList<Book> library;
+	private int idIter;
+	public localDB() {
+		idIter =0;
+	}
+	public void addBook(Book book) {
+		idIter++;
+		book.setId(idIter);
+		library.add(book);
+	}
+	
+	public void removeBooks() {
+		idIter = 0;
+		library.clear();
+	}
+	
+	public ArrayList<Book> getLibrary(){
+		library.sort((b1, b2)
+                -> b1.getTitle().compareTo(
+                    b2.getTitle()));
+		return library;
+	}
 }
