@@ -8,6 +8,7 @@ public class localDB {
 	private ArrayList<Book> library;
 	private int idIter;
 	public localDB() {
+		library = new ArrayList<Book>();
 		idIter =0;
 	}
 	public void addBook(Book book) {
@@ -23,7 +24,7 @@ public class localDB {
 	
 	public ArrayList<Book> getLibrary(){
 		library.sort((b1, b2)
-                -> b1.getTitle().compareTo(
+                -> b1.getTitle().compareToIgnoreCase(
                     b2.getTitle()));
 		return library;
 	}

@@ -12,9 +12,11 @@ import com.example.backendexercise.model.Book;
 
 @Service
 public class BackendExerciseService {
+	localDB library;
 	
-	@Autowired
-	localDB library = new localDB();
+	public BackendExerciseService() {
+		library = new localDB();
+	}
 	
 	public Book addBook(Book book) {
 		library.addBook(book);

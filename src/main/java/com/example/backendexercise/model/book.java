@@ -3,7 +3,7 @@ package com.example.backendexercise.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Book {
-	@JsonProperty("id")
+	//@JsonProperty("id")
 	private int id;
 	
 	@JsonProperty("author")
@@ -13,7 +13,7 @@ public class Book {
 	private String title;
 	 	
 	@JsonProperty("yearPublished")
-	private String yearPublished;
+	private int yearPublished;
 
 	public int getId() {
 		return id;
@@ -39,11 +39,11 @@ public class Book {
 		this.title = title;
 	}
 
-	public String getYearPublished() {
+	public int getYearPublished() {
 		return yearPublished;
 	}
 
-	public void setYearPublished(String yearPublished) {
+	public void setYearPublished(int yearPublished) {
 		this.yearPublished = yearPublished;
 	}
 	
