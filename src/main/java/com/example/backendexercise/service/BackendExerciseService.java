@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.example.backendexercise.database.LocalDB;
-import com.example.backendexercise.model.Book;
+import com.example.backendexercise.database.localDB;
+import com.example.backendexercise.model.book;
 
 @Service
 public class BackendExerciseService {
-	LocalDB library = new LocalDB();
+	localDB library = new localDB();
 	
-	public Book addBook(Book book) {
+	public book addBook(book book) {
 		library.addBook(book);
 		return book;
 	}
 	
-	public ArrayList<Book> getBooks() {
+	public ArrayList<book> getBooks() {
 		return library.getLibrary();
 	}
 	

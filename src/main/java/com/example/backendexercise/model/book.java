@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-public class Book{
+public class book{
 	private int id;
 	
 	@JsonProperty("author")

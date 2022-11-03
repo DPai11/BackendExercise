@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.backendexercise.model.Book;
+import com.example.backendexercise.model.book;
 import com.example.backendexercise.service.BackendExerciseService;
 
 
@@ -24,12 +24,12 @@ public class BackendExerciseController {
     }
 	
 	@RequestMapping(value="/books", method=RequestMethod.POST)
-	public Book addBook(@RequestBody Book book) {
+	public book addBook(@RequestBody book book) {
 		return service.addBook(book);
 	}
 	
 	@RequestMapping(value="/books", method=RequestMethod.GET)
-	public ArrayList<Book> getBooks() {
+	public ArrayList<book> getBooks() {
 		return service.getBooks();
 	}
 	

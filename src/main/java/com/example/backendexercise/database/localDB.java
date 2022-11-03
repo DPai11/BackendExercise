@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 
-import com.example.backendexercise.model.Book;
+import com.example.backendexercise.model.book;
 @Entity
-public class LocalDB {
-	private ArrayList<Book> library;
+public class localDB {
+	private ArrayList<book> library;
 	private int idIter;
-	public LocalDB() {
-		library = new ArrayList<Book>();
+	public localDB() {
+		library = new ArrayList<book>();
 		idIter =0;
 	}
-	public void addBook(Book book) {
+	public void addBook(book book) {
 		idIter++;
 		book.setId(idIter);
 		library.add(book);
@@ -24,7 +24,7 @@ public class LocalDB {
 		library.clear();
 	}
 	
-	public ArrayList<Book> getLibrary(){
+	public ArrayList<book> getLibrary(){
 		library.sort((b1, b2)
                 -> b1.getTitle().compareToIgnoreCase(
                     b2.getTitle()));
