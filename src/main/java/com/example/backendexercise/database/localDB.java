@@ -2,8 +2,10 @@ package com.example.backendexercise.database;
 
 import java.util.ArrayList;
 
-import com.example.backendexercise.model.Book;
+import javax.persistence.Entity;
 
+import com.example.backendexercise.model.Book;
+@Entity
 public class LocalDB {
 	private ArrayList<Book> library;
 	private int idIter;
