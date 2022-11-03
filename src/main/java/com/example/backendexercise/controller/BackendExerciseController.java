@@ -13,7 +13,7 @@ import com.example.backendexercise.service.BackendExerciseService;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class BackendExerciseController {
 	@Autowired
 	BackendExerciseService service;
