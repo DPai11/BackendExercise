@@ -1,7 +1,6 @@
 package com.example.backendexercise.model;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
