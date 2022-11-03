@@ -13,26 +13,27 @@ import com.example.backendexercise.service.BackendExerciseService;
 
 
 @RestController
+@RequestMapping("api")
 public class BackendExerciseController {
 	@Autowired
 	BackendExerciseService service;
 	
-	@RequestMapping(value="api/health", method=RequestMethod.GET)
+	@RequestMapping(value="/health", method=RequestMethod.GET)
     public String healthCheck() {
         return "HEALTHY";
     }
 	
-	@RequestMapping(value="api/books", method=RequestMethod.POST)
+	@RequestMapping(value="/books", method=RequestMethod.POST)
 	public book addBook(@RequestBody book book) {
 		return service.addBook(book);
 	}
 	
-	@RequestMapping(value="api/books", method=RequestMethod.GET)
+	@RequestMapping(value="/books", method=RequestMethod.GET)
 	public ArrayList<book> getBooks() {
 		return service.getBooks();
 	}
 	
-	@RequestMapping(value="api/books", method=RequestMethod.DELETE)
+	@RequestMapping(value="/books", method=RequestMethod.DELETE)
 	public void removeBooks() {
 		service.removeBooks();
 	}
