@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import javax.persistence.Entity;
 
 import com.example.backendexercise.model.book;
+import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 public class localDB {
+	@JsonProperty("books")
 	private ArrayList<book> library;
 	private int idIter;
 	public localDB() {
