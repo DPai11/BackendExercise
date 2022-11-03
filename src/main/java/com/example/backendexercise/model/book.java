@@ -1,9 +1,11 @@
 package com.example.backendexercise.model;
 
+import javax.persistence.Id;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Book {
-	//@JsonProperty("id")
+public class Book{
+	@Id
 	private int id;
 	
 	@JsonProperty("author")
